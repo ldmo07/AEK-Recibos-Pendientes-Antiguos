@@ -16,3 +16,4 @@ export const urlRutaBaseRecibosPendientes = 'https://www.uniminuto.edu/pecuniari
 export const apikey='5H9CcvkLZJTgPDDCXTXTI7KC90k6prl0';
 export const apikey2 = 'uxpWFePgheXvuP9Tun8TYxvjb0FgeSLH';
 export const urlGenearIdPSE= 'https://uniminuto.test.digibee.io/pipeline/uniminuto/v1/pasarelas-pago/linkPagoZonaPagos'
+export const urlPagoPSE = 'https://www.zonapagosdemo.com/t_uniminuto/pago.asp?estado_pago=iniciar_pago&identificador='
