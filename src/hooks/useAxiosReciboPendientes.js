@@ -134,16 +134,7 @@ export const useAxiosReciboPendientes = (userData) => {
                 const partes = pago.RUTA.split("/");
                 const ultimaParte = `${rutaBasePdf}/${partes[partes.length - 1]}`;
                 const nombrePdf = `${partes[partes.length - 1]}`;
-                //const valor = pago.VALOR1.trim().replace(/\./g, '').split(',')[0];
-                let valor = 0;
-                if (pago.FECHA1 != null) {
-                    valor = pago.VALOR1.trim().replace(/\./g, '').split(',')[0];
-                } else if (pago.FECHA2 != null) {
-                    valor = pago.VALOR2.trim().replace(/\./g, '').split(',')[0];
-                } else if (pago.FECHA3 != null) {
-                    valor = pago.VALOR3.trim().replace(/\./g, '').split(',')[0];
-                }
-                
+                const valor = pago.VALOR1.trim().replace(/\./g, '').split(',')[0];
                 const materiales = pago.T_MATERIALES
                 const idPSE = await obtenerIdPSE(valor, pago.FACTURA, userData);//llamo a la funcion de obtener idPSE
                 return { RUTA: ultimaParte, FACTURA: pago.FACTURA, NOMBREPDF: nombrePdf, VALOR1: valor, IDPSE: idPSE, MATERIALES:materiales };
